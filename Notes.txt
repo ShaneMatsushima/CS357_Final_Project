@@ -1,0 +1,13 @@
+JSON file layout:
+{
+    "alphabet": ["a1", "a2", ... , "aN"],
+    "states": ["s1", "s2", ... , "sK"],
+    "initial_states": ["sX", ... , "sY"],
+    "accepting_states": ["sA", ..., "sB"],
+    "transitions": [
+        ["from", "action", "to"],
+        ...,
+        ["from_Z", "action_Z", "to_Z"]
+    ]
+}
+
