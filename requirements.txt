@@ -1,0 +1,2 @@
+automata==0.1.4
+automata_lib==5.0.0
