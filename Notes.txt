@@ -3,5 +3,17 @@ Need to do:
 - create txt and script for reading input tests
 - create requirements for project using pipreqs
 
+solutions:
+- look into exec() for running soure code from txt file for imports
+    - create struct of dfa in txt
+    - read txt file
+    - allocate variables based on txt file using exec()
+    -import allocated variables to main script
+    - run with test files
+
+Notes:
+- grabDFA creates dfa variables to use in order to get the text file
+- main creates dfa from grabDFA and runs test script on dfa created
+
 
 
