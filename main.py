@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from os import stat_result
 from typing import final
 from automata.fa.dfa import DFA
@@ -17,6 +18,9 @@ alphabet = {}
 initial = ''
 finals = {}
 transitions = {}
+
+transition_string = ''
+exec(transition_string) # will place transition dict into this transition dict 
 
 #TODO implement grabbed variables to create dfa
 
