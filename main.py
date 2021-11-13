@@ -1,12 +1,9 @@
-#!/usr/bin/python
-from os import stat_result
-from typing import final
 from automata.fa.dfa import DFA
 
-f = open('put-input-dfa-file-here', 'r')
 
 #TODO grab variables of dfa from text file of dfa
-
+f = open('/Users/shanematsushima/Dev/CS357_Final_Project/test/dfa_1.txt', 'r')
+input_dfa = f.readlines()
 #read file and put variables based on name of categories (could be done using
 # a csv or some sort of delimiter to find the variables needed easier)
 # for sets, use the set() 
@@ -19,8 +16,9 @@ initial = ''
 finals = {}
 transitions = {}
 
-transition_string = ''
-exec(transition_string) # will place transition dict into this transition dict 
+for lines in input_dfa:
+    exec(lines)
+
 
 #TODO implement grabbed variables to create dfa
 
@@ -32,21 +30,23 @@ new_dfa = DFA(
     final_states= finals
 )
 
+#read input txt file 
+f = open('/Users/shanematsushima/Dev/CS357_Final_Project/test/testcase.txt', 'r')
 
-#TODO read input txt file 
-f = open('put-input-string-file-here', 'r')
+#create array of test cases and run test cases in the dfa
+test = f.readlines()
 
-#TODO create array of test cases and run test cases in the dfa
+#close file once it has been read
+f.close()
 
-test = []
-
+#test each test case from file
 for cases in test:
-    print(new_dfa.accepts_input(test[cases]))
+    print(new_dfa.accepts_input(cases.strip()))
 
 #TODO grab case results and write to an output file 
 # (or terminal if not enough time to implement)
 
-out = open('put-output-results-file-here', 'w')
+# out = open('put-output-results-file-here', 'w')
 
 
 

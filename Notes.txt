@@ -15,7 +15,6 @@ Notes:
 - creates dfa variables to use in order to get the text file
 - main creates dfa from grabDFA and runs test script on dfa created
 
-
 Possible Implementations:
 - Create UI for input of files used
 - graphic aspect of system working...
