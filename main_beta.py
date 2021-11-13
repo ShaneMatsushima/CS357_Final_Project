@@ -1,11 +1,9 @@
 from automata.fa.dfa import DFA
-import os, sys
+import os
 
-print(sys.argv[1])
-print(sys.argv[2])
 
 #grab variables of dfa from text file of dfa
-f = open(str(sys.argv[1]), 'r')
+f = open('/Users/shanematsushima/Dev/CS357_Final_Project/test/dfa_1.txt', 'r')
 input_dfa = f.readlines()
 #read file and put variables based on name of categories (could be done using
 # a csv or some sort of delimiter to find the variables needed easier)
@@ -38,7 +36,7 @@ new_dfa = DFA(
 )
 
 #read input txt file 
-f = open(str(sys.argv[2]), 'r')
+f = open('/Users/shanematsushima/Dev/CS357_Final_Project/test/testcase.txt', 'r')
 
 #create array of test cases and run test cases in the dfa
 test = f.readlines()
