@@ -5,20 +5,24 @@ from tkinter import filedialog
 from automata.fa.dfa import DFA
 import os
 
+# variables used for pathing 
 dfa_file = ""
 test_file = ""
 
+# dfa variables
 states = {} 
 alphabet = {} 
 initial = ''
 finals = {}
 transitions = {}
 
+# gui dimensions
 WIDTH = 400
 HEIGHT = 250
 
 size = str(WIDTH) + "x" + str(HEIGHT)
 
+# gui created
 root = Tk()
 root.geometry(size)
 root.title('DFA String Tester')
@@ -31,6 +35,7 @@ root.rowconfigure(2, weight=1)
 root.rowconfigure(3, weight=1)
 root.rowconfigure(4, weight=1)
 
+# Opens dfa file selected for the program
 def open_dfa():
     global  dfa_file
     file = askopenfile(initialdir='/', title="Please select a dfa file")
@@ -40,8 +45,7 @@ def open_dfa():
     dfa_path.config(text= dfa_file)
     root.update_idletasks()
 
-
-
+# Opens test cases used for dfa testing in the program
 def open_test():
     global test_file
     file = askopenfile(initialdir='/', title="Please select a test file")
@@ -51,7 +55,9 @@ def open_test():
     test_path.config(text= test_file)
     root.update_idletasks()
 
-
+# utilized paths of both test case and dfa to run test cases, resulting in a txt file with results
+# of the test cases on the dfa. This utilized a seperate script for the main program as the exec()
+# function is utilized in creating the dfa. 
 def runProg(dfa,test):
     print("--------------")
     print(str(dfa))
