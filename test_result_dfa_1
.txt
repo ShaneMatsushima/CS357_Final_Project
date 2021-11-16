@@ -1,11 +1,23 @@
 True: 01
-states visited: q0->q0->q1->accept
+
+States Visited: q0->q0->q1->accept
+--------------------------------------------
 False: 011
-States visited: Rejected
+
+States Visited: Rejected
+--------------------------------------------
 False: 01111
-States visited: Rejected
+
+States Visited: Rejected
+--------------------------------------------
 True: 0011101
-states visited: q0->q0->q0->q1->q2->q1->q0->q1->accept
+
+States Visited: q0->q0->q0->q1->q2->q1->q0->q1->accept
+--------------------------------------------
 True: 01010101
-states visited: q0->q0->q1->q0->q1->q0->q1->q0->q1->accept
-False: 010101010States visited: Rejected
+
+States Visited: q0->q0->q1->q0->q1->q0->q1->q0->q1->accept
+--------------------------------------------
+False: 010101010
+States Visited: Rejected
+--------------------------------------------

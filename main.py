@@ -14,7 +14,7 @@ initial = ''
 finals = {}
 transitions = {}
 
-WIDTH = 250
+WIDTH = 400
 HEIGHT = 250
 
 size = str(WIDTH) + "x" + str(HEIGHT)
@@ -76,9 +76,9 @@ test_path = Label(root, textvariable= test_file)
 # UI Element Placement
 
 selectDFAButton.grid(column=0, row=0, padx=WIDTH/5)
-dfa_path.grid(column=0, row=1, padx=WIDTH/5)
+dfa_path.grid(column=0, row=1)
 selectTestButton.grid(column=0, row=2, padx=WIDTH/5)
-test_path.grid(column=0, row=3, padx=WIDTH/5)
+test_path.grid(column=0, row=3)
 applyButton.grid(column=0, row=4, padx=WIDTH/5)
 
 
