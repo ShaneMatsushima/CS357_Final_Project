@@ -74,11 +74,13 @@ for i in range(len(result)):
 
     #write states reached each for each state accepted
     if result[i] == True:
-        q.write("states visited: ")
+        q.write("States Visited: ")
         for step in step_list[i]:
             q.write(str(step) + "->")
         q.write("accept\n")
     else:
-        q.write("States visited: Rejected\n")
+        q.write("States Visited: Rejected\n")
+    
+    q.write("--------------------------------------------\n")
 
 q.close()
