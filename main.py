@@ -58,7 +58,7 @@ def runProg(dfa,test):
     print("--------------")
     print(str(test))
     print("--------------")
-    script = "python test.py " + str(dfa) + " " + str(test)
+    script = "python main_script.py " + str(dfa) + " " + str(test)
     print(script)
     os.system(script)
     messagebox.showinfo(title="Complete...", message="Result file created.")
