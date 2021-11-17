@@ -2,7 +2,6 @@ from tkinter import *
 from tkinter.filedialog import askopenfile
 from tkinter import messagebox
 from tkinter import filedialog
-from automata.fa.dfa import DFA
 import os
 
 # variables used for pathing 
@@ -64,7 +63,7 @@ def open_test():
         messagebox.showinfo(title='Selected file', message=file.name)
         test_path.config(text= test_file)
         root.update_idletasks()
-        
+
     except(OSError,FileNotFoundError):
         print(f'Unable to find or open <{file}>')
 
