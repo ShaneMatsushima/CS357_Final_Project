@@ -7,6 +7,7 @@ print(sys.argv[2])
 #grab variables of dfa from text file of dfa
 f = open(str(sys.argv[1]), 'r')
 input_dfa = f.readlines()
+
 #read file and put variables based on name of categories (could be done using
 # a csv or some sort of delimiter to find the variables needed easier)
 # for sets, use the set() 
@@ -24,11 +25,7 @@ input_dfa_append = input_dfa[1:]
 
 
 for lines in input_dfa_append:
-    try:
         exec(lines.strip())
-        break
-    except Exception as e:
-        print("Error: ", e.__class__, "on: " + str(lines))
 
 
 #implement grabbed variables to create dfa
@@ -59,10 +56,12 @@ for cases in test:
     result.append(new_dfa.accepts_input(cases.strip()))
 
 
-#grab case results and write to an output file 
+# grab case results and write to an output file
+# Output file is placed in a folder called results for easy of access 
 # (or terminal if not enough time to implement)
 
-result_name = 'test_result_' + name + ".txt"
+cwd = os.getcwd()
+result_name = str(cwd) + '/results/test_result_' + name + ".txt"
 
 # delete file if it already exists
 if os.path.exists(result_name):
