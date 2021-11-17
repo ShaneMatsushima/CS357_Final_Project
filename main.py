@@ -38,22 +38,38 @@ root.rowconfigure(4, weight=1)
 # Opens dfa file selected for the program
 def open_dfa():
     global  dfa_file
-    file = askopenfile(initialdir='/', title="Please select a dfa file")
-    dfa_file = file.name 
-    print(dfa_file)
-    messagebox.showinfo(title='Selected file', message=file.name)
-    dfa_path.config(text= dfa_file)
-    root.update_idletasks()
+    try:
+        file = askopenfile(initialdir='/', title="Please select a dfa file")
+        dfa_file = file.name 
+        print(dfa_file)
+        messagebox.showinfo(title='Selected file', message=file.name)
+        dfa_path.config(text= dfa_file)
+        root.update_idletasks()
+
+    except(OSError,FileNotFoundError):
+        print(f'Unable to find or open <{file}>')
+
+    except Exception as error:
+        print(f'An error occurred: <{error}>')
+    
+    
 
 # Opens test cases used for dfa testing in the program
 def open_test():
     global test_file
-    file = askopenfile(initialdir='/', title="Please select a test file")
-    test_file = file.name
-    print(test_file)
-    messagebox.showinfo(title='Selected file', message=file.name)
-    test_path.config(text= test_file)
-    root.update_idletasks()
+    try:
+        file = askopenfile(initialdir='/', title="Please select a test file")
+        test_file = file.name
+        print(test_file)
+        messagebox.showinfo(title='Selected file', message=file.name)
+        test_path.config(text= test_file)
+        root.update_idletasks()
+        
+    except(OSError,FileNotFoundError):
+        print(f'Unable to find or open <{file}>')
+
+    except Exception as error:
+        print(f'An error occurred: <{error}>')
 
 # utilized paths of both test case and dfa to run test cases, resulting in a txt file with results
 # of the test cases on the dfa. This utilized a seperate script for the main program as the exec()

@@ -24,7 +24,11 @@ input_dfa_append = input_dfa[1:]
 
 
 for lines in input_dfa_append:
-    exec(lines.strip())
+    try:
+        exec(lines.strip())
+        break
+    except Exception as e:
+        print("Error: ", e.__class__, "on: " + str(lines))
 
 
 #implement grabbed variables to create dfa
