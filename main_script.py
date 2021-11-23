@@ -73,7 +73,7 @@ q = open(result_name, 'w')
 for i in range(len(result)):
 
     #writes bool result of test case
-    q.write(str(result[i]) + ": " + str(test[i]) + "\n")
+    q.write(('Accept' if result[i] else 'Reject') + ": " + str(test[i]) + "\n")
 
     #write states reached each for each state accepted
     if result[i] == True:

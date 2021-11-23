@@ -1,23 +1,23 @@
-True: 01
+Accept: 01
 
 States Visited: q0->q0->q1->accept
 --------------------------------------------
-False: 011
+Reject: 011
 
 States Visited: Rejected
 --------------------------------------------
-False: 01111
+Reject: 01111
 
 States Visited: Rejected
 --------------------------------------------
-True: 0011101
+Accept: 0011101
 
 States Visited: q0->q0->q0->q1->q2->q1->q0->q1->accept
 --------------------------------------------
-True: 01010101
+Accept: 01010101
 
 States Visited: q0->q0->q1->q0->q1->q0->q1->q0->q1->accept
 --------------------------------------------
-False: 010101010
+Reject: 010101010
 States Visited: Rejected
 --------------------------------------------

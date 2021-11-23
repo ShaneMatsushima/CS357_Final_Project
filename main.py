@@ -74,11 +74,11 @@ def open_test():
 # of the test cases on the dfa. This utilized a seperate script for the main program as the exec()
 # function is utilized in creating the dfa. 
 def runProg(dfa,test):
-    print("--------------")
+    print("-------------- DFA FILE SELECTED --------------")
     print(str(dfa))
-    print("--------------")
+    print("-------------- TEST CASE FILE SELECTED --------------")
     print(str(test))
-    print("--------------")
+    print("-------------- SCRIPT RUN --------------")
     script = "python main_script.py " + str(dfa) + " " + str(test)
     print(script)
     os.system(script)
